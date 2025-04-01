@@ -27,10 +27,10 @@ A poster-style Quarto document in [English](https://github.com/Alliance-RDM-GDR/
 
     - Explore the html files listed above or
     
-    # Install Quarto if not already installed
+    - Install Quarto if not already installed
     https://quarto.org/docs/get-started/
 
-    # Modify and render the documents to HTML
+    - Modify and render the documents to HTML
     Example:
     quarto render RDM_Codebook_en.qmd
     quarto render RDM_Organize-Deposit_en.qmd
