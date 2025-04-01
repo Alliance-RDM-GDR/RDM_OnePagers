@@ -1,0 +1,220 @@
+---
+title: Partager des données de recherche de haute qualité et des flux de travail reproductibles 
+format:
+  poster-typst: 
+    size: "36x24"
+    poster-authors: "Équipe de curation des données de recherche"
+    departments: "Dépôt fédéré de données de recherche -DFDR"
+    institution-logo: "./images/General/alliancelogo.png"
+    footer-text: "Dépôt fédéré de données de recherche (DFDR)"
+    footer-url: "https://www.frdr-dfdr.ca/"
+    footer-emails: "rdm-gdr@alliancecan.ca"
+    footer-color: "d6ab00"
+    keywords: ["Gestion des données de recherche", "science ouverte", "partage des données"]
+---
+
+# Cycle de vie des données de recherche{.center}
+
+![](images/Organize-Deposit/LifeCycle_Long_French.png){fig-align="center" width="90%"}
+
+
+# Rendre les données de recherche compréhensibles
+
+![](images/Organize-Deposit/Understandable_Vector_French.png){fig-align="center" width="100%"}
+
+Le partage des données de recherche comprend des procédures systématiques
+permettant de les [découvrir, comprendre et réutiliser]{style="color:darkgreen;"} au profit de la communauté. Il
+garantit également des [flux de travail reproductibles]{style="color:darkgreen;"} qui permettent de reproduire et de
+valider les résultats de recherche.
+
+
+## **Privilégier les formats de fichiers ouverts et non propriétaires**
+
+::: {style="text-align: left; font-size: 65%"}
+| **Type de données**   | **Formats recommandés** |**Notes**                                                           |
+|-----------------------|-------------------------|--------------------------------------------------------------------|
+| Données tabulaires    | CSV, TSV                | Largement soutenu, non propriétaire                                |
+| Documents textuels    | TXT, PDF/A              | PDF/A est un format d'archivage à long terme                       |
+| Images                | TIFF, PNG               | TIFF pour un résultat sans perte, PNG pour une taille plus petite  |
+| Données géospatiales  | GeoTIFF, Shapefile      | S'assurer que tous les composants du fichier Shapefile sont inclus |
+| Données audio         | WAV, FLAC               | WAV pour l'audio non compressé                                     |
+| Données vidéo         | MP4, MOV                | MP4 est largement compatible, mais avec perte                      |
+| Code                  | PY, R, QMD              | Fournir un code et des scripts bien commentés                      |
+:::
+
+## **Mettre en oeuvre des flux de travail reproductibles** 
+
+::: {style="text-align: left; font-size: 80%"}
+Utiliser des [logiciels libres]{style="color:darkgreen;"} pour traiter les images et les données. Utiliser des scripts pour le [traitement par lots]{style="color:darkgreen;"} et permettre des [flux de travail reproductibles]{style="color:darkgreen;"}.
+:::
+
+::::: {layout-ncol="4"}
+:::: {#first-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/Fiji.png){fig-align="center" width="41%"}
+
+[**Fiji**](https://imagej.net/software/fiji/downloads) (Traitement d'images)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/Qupath.png){fig-align="center" width="35%"}
+
+[**QuPath**](https://qupath.github.io/) (Traitement d'images))
+:::
+::::
+
+:::: {#third-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/R_logo.png){fig-align="center" width="60%"}
+
+[**R**](https://posit.co/download/rstudio-desktop/) (Analyse de données)
+:::
+::::
+
+:::: {#forth-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/Python.png){fig-align="center" width="40%"}
+
+[**Python**](https://www.python.org/downloads/) (Analyse d'images)
+:::
+::::
+:::::
+
+## **Organiser vos fichiers de manière logique** 
+
+::: {style="text-align: left; font-size: 80%"}
+Les fichiers doivent être faciles à retrouver et à identifier pour tout réutilisateur potentiel.
+:::
+
+::::: {layout-ncol="2" nrow=2}
+:::: {#first-column}
+::: {style="text-align: left; font-size: 80%"}
+- Mettre au point une **structure de dossiers logique** hébergeant les fichiers bruts et traités, le code d'analyse et les résultats finaux.
+  
+- Utiliser des **conventions de dénomination** descriptives pour étiqueter les dossiers et les fichiers.
+:::  
+
+
+::: {style="text-align: left;font-size: 80%"}
+ **Exemple de projet**  /   **Générateur d'arbres**
+:::
+
+![](images/Organize-Deposit/ExampleProject_QR.png){fig-align="right" width="31%"}  |                          ![](images/Organize-Deposit/TreeGenerator.png){fig-align="right" width="32%"} 
+::::
+
+:::: {#second-column}
+::: {style="text-align: center; font-size: 55%"}
+**Protocole TIER 4.0**
+
+```plaintext
+Projet/
+├── The Readme File
+├── The Report
+├── Data/
+│   ├── InputData/
+│   │   ├── Input Data Files
+│   │   ├── Metadata/
+│   │   │   ├── Data Sources Guide
+│   │   │   └── Codebooks
+│   ├── AnalysisData/
+│   │   ├── Analysis Data Files
+│   │   └── The Data Appendix
+│   └── IntermediateData/
+├── Scripts/
+│   ├── ProcessingScripts/
+│   ├── DataAppendixScripts/
+│   ├── AnalysisScripts/
+│   └── The Master Script
+├── Output/
+│   ├── DataAppendixOutput
+│   └── Results
+```
+:::
+::::
+:::::
+
+
+## **Mettre en oeuvre des métadonnées complètes** 
+
+::::: {layout-ncol="2" nrow=2}
+:::: {#first-column width="70%"}
+::: {style="text-align: left; font-size: 90%"}
+[Décrire et contextualiser]{style="color:darkgreen;"} ses données à l'aide de **métadonnées**, de fichiers **README** et de **livres de code**. Cela permet une réutilisation correcte des jeux de données. Pensez aux éléments suivants lors de l'élaboration de la documentation:
+:::
+::::
+
+:::: {#second-column width="30%"}
+::: {style="text-align: center;font-size: 70%"}
+![](images/Organize-Deposit/Readme_QR.png){fig-align="center" width="50%"} 
+
+**Télécharger un modèle de Readme**
+:::
+::::
+:::::
+
+::: {style="text-align: left; font-size: 90%"}
+  +  **Auteurs** et **contenu du jeu de données**: Ils permettent à l'utilisateur de comprendre l'ensemble de données indépendamment des articles de recherche associés. Les jeux de données sont des **objets autonomes** utilisables seuls.
+:::
+
+::: {style="text-align: left; font-size: 80%"}
+```plaintext
+Exemple depuis https://doi.org/10.20383/103.0802
+Le jeu de données contient des données de caractérisation et d'activité pour une série d'échantillons d'électrodes de nitrure de carbone. Le nitrure de carbone a été cultivé sur du FTO, du FTO nettoyé au plasma et du FTO aminosilanisé nettoyé au plasma. Du platine a également été ajouté sur le CNx pour certains échantillons...
+```
+:::
+
+::: {style="text-align: left; font-size: 90%"}
+  +  **Informations sur l'accès/la licence:** Décriver comment la communauté peut réutiliser les données. Vérifier le [consentement de l'Open Brain](https://open-brain-consent.readthedocs.io/en/stable/) lorsqu'il s'agit de données sensibles, par exemple.
+:::
+
+::::: {layout-ncol="2"}
+:::: {#first-column width="70%"}
+::: {style="text-align: left; font-size: 80%"}
+::: {.callout-tip}
+## CC BY 4.0 Attribution 4.0 International
+
+Cette licence standard permet aux utilisateurs de **partager** ((copier et redistribuer) et **d'adapter** (remix, transform) (remixer, transformer) le
+matériel pour n'importe quel usage, à condition d'en mentionner les auteurs originaux. 
+:::
+:::
+::::
+
+:::: {#second-column width="30%"}
+::: {style="text-align: right;font-size: 70%"}
+![](images/Organize-Deposit/OpenBrain_QR.png){fig-align="right" width="50%"} 
+
+**Visitez l'Open Brain Consent**
+:::
+::::
+:::::
+
+::: {style="text-align: left; font-size: 90%"}
++  **Informations méthodologiques:** Décrire comment les données ont été générées. Cette information permet de contextualiser et de valider le jeu des données. 
+:::
+
+::: {style="text-align: left; font-size: 80%"}
+```plaintext
+Exemple depuis https://doi.org/10.20383/103.0802
+Les mesures électrochimiques ont été effectuées dans une cellule électrochimique en quartz à l'aide d'un potentiostat Palmsens4. L'électrolyte a été entièrement purgé avec de l'Ar entre les balayages pour créer un environnement électrochimique inerte... 
+```
+:::
+
+# Partagez vos données dans des référentiels
+
+::: {style="text-align: left; font-size: 90%"}
+Ces bonnes pratiques de gestion des données font que les ensembles de données peuvent être partagés dans des dépôts comme [DFDR]{style="color:blue;"} (https://www.frdr-dfdr.ca/) et [Borealis]{style="color:blue;"} (https://borealisdata. ca/). Le DFDR est un dépôt multidisciplinaire, bilingue et curaté, destiné exclusivement aux chercheurs canadiens et spécialisé dans les dépôts de données volumineux. Borealis, l'instance canadienne du Dataverse, est un dépôt de données de recherche bilingue, multidisciplinaire et sécurisé, soutenu par les bibliothèques universitaires et les institutions de recherche à travers le Canada.
+:::
+
+![](images/General/Repositories_Logo.png){fig-align="center" width="80%"}
+
+:::: {style="text-align: left; font-size: 90%"}
+::: {.callout-tip}
+## Accord tri-agences canadien
+Le gouvernement du Canada a établi en 2021 le [Cadre des trois organismes](https://rcr.ethics.gc.ca/eng/framework-cadre-2021.html) pour
+favoriser une conduite responsable de la recherche, notamment des bonnes pratiques pour mettre en oeuvre des plans de gestion des données (PGD) et partager des données provenant de la science financée par des fonds publics.   
+:::
+::::
+
+

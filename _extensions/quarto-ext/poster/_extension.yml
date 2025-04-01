@@ -1,0 +1,11 @@
+title: Sharing high-quality research data and reproducible workflows
+author: Daniel Manrique-Castano. Ph.D.
+version: 1.0.0
+quarto-required: ">=1.4.415"
+contributes:
+  formats:
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+

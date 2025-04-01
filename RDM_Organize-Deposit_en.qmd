@@ -1,0 +1,197 @@
+---
+title: Sharing high-quality research data and reproducible workflows 
+format:
+  poster-typst: 
+    size: "36x24"
+    poster-authors: "Research data curation team"
+    departments: "Federated Research Data Repository"
+    institution-logo: "./images/General/alliancelogo.png"
+    footer-text: "Federated Research Data Repository (FRDR)"
+    footer-url: "https://www.frdr-dfdr.ca/"
+    footer-emails: "rdm-gdr@alliancecan.ca"
+    footer-color: "d6ab00"
+    keywords: ["Research data management", "Open science", "Data sharing"]
+---
+
+# Research data life cycle{.center}
+
+![](images/Organize-Deposit/LifeCycle_Long.png){fig-align="center" width="100%"}
+
+
+# Making research data understandable
+
+![](images/Organize-Deposit/Understandable_Vector.png){fig-align="center" width="100%"}
+Sharing research data comprises systematic procedures to make it [discoverable, understandable and reusable]{style="color:darkgreen;"} for the community. It also ensures [reproducible workflows]{style="color:darkgreen;"} to replicate and validate research findings.
+
+
+.
+
+## **Prioritize open, non-proprietary file formats**
+
+::: {style="text-align: left; font-size: 80%"}
+| **Data Type**   | **Recommended Formats** |**Notes**                                     |
+|-----------------|-------------------------|----------------------------------------------|
+| Tabular data    | CSV, TSV                | Widely supported, non-proprietary            |
+| Text documents  | TXT, PDF/A              | PDF/A is a long-term archiving format        |
+| Images          | TIFF, PNG               | TIFF for lossless, PNG for smaller size      |
+| Geospatial data | GeoTIFF, Shapefile      | Ensure all Shapefile components are included |
+| Audio data      | WAV, FLAC               | WAV for uncompressed audio                   |
+| Video data      | MP4, MOV                | MP4 is widely compatible, but lossy          |
+| Code            | PY, R, QMD              | Provide well-commented code and scripts      |
+:::
+
+## **Implement reproducible workflows** 
+
+Use [open-source/free]{style="color:darkgreen;"} software to handle images and data. Employ scripts for [batch processing]{style="color:darkgreen;"} and enable [reproducible workflows]{style="color:darkgreen;"}.
+
+::::: {layout-ncol="4"}
+:::: {#first-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/Fiji.png){fig-align="center" width="61%"}
+
+[**Fiji**](https://imagej.net/software/fiji/downloads) (Image processing)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/Qupath.png){fig-align="center" width="50%"}
+
+[**QuPath**](https://qupath.github.io/) (Image processing)
+:::
+::::
+
+:::: {#third-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/R_logo.png){fig-align="center" width="65%"}
+
+[**R/R-studio**](https://posit.co/download/rstudio-desktop/) (Data analysis)
+:::
+::::
+
+:::: {#forth-column}
+::: {style="text-align: left;font-size: 60%"}
+![](images/Organize-Deposit/Python.png){fig-align="center" width="46%"}
+
+[**Python**](https://www.python.org/downloads/) (Data/image analysis)
+:::
+::::
+:::::
+
+## **Organize your files logically** 
+
+The files must be easy to retrieve and identify for any potential reuser.
+
+::::: {layout-ncol="2" nrow=2}
+:::: {#first-column}
+- Build a [logical folder structure]{style="color:darkgreen;"} hosting raw and processed files, analysis code and final outputs.
+  
+- Use descriptive [naming conventions]{style="color:darkgreen;"} to label folders and files.
+  
+
+
+::: {style="text-align: left;font-size: 80%"}
+ **Example project**    /     **Tree generator**
+:::
+
+![](images/Organize-Deposit/ExampleProject_QR.png){fig-align="right" width="31%"}  |                          ![](images/Organize-Deposit/TreeGenerator.png){fig-align="right" width="32%"} 
+::::
+
+:::: {#second-column}
+::: {style="text-align: center; font-size: 55%"}
+**TIER Protocol 4.0**
+
+```plaintext
+Project/
+├── The Readme file
+├── The Report
+├── Data/
+│   ├── InputData/
+│   │   ├── Input Data Files
+│   │   ├── Metadata/
+│   │   │   ├── Data Sources Guide
+│   │   │   └── Codebooks
+│   ├── AnalysisData/
+│   │   ├── Analysis Data Files
+│   │   └── The Data Appendix
+│   └── IntermediateData/
+├── Scripts/
+│   ├── ProcessingScripts/
+│   ├── DataAppendixScripts/
+│   ├── AnalysisScripts/
+│   └── The Master Script
+├── Output/
+│   ├── DataAppendixOutput
+│   └── Results
+```
+:::
+::::
+:::::
+
+
+## **Implement comprenhensive metadata** 
+
+::::: {layout-ncol="2" nrow=2}
+:::: {#first-column width="70%"}
+[Describe and contextualize]{style="color:darkgreen;"} your data the data using **metadata**, **README** files and **codebooks**. This enables the correct re-use of the dataset. Think about the following items when building documentation:
+::::
+
+:::: {#second-column width="30%"}
+::: {style="text-align: center;font-size: 70%"}
+![](images/Organize-Deposit/Readme_QR.png){fig-align="center" width="50%"} 
+
+**Download a Readme template**
+:::
+::::
+:::::
+
+  +  **Authors** and **content of the dataset**: These enable users to [understand the dataset]{style="color:darkgreen;"} independent of any associated research articles. Datasets are [standalone objects]{style="color:darkgreen;"} usable on their own.
+
+::: {style="text-align: left; font-size: 80%"}
+```plaintext
+Example from https://doi.org/10.20383/103.0802
+The dataset contains characterization and activity data for a series of carbon nitride electrode samples. Carbon nitride was grown on FTO, plasma-cleaned FTO, and aminosilanized plasma-cleaned FTO . Pt was also added on top of the CNx for some samples...
+```
+:::
+
+  +  **Access/License information:** Describe how the community can reuse the data. [Creative Commons]{style="color:darkgreen;"} offers a wide variety of license options. You can refer to the templates created by [Open Brain Consent](https://open-brain-consent.readthedocs.io/en/stable/) when working with sensitive Neuroimaging data.
+  
+::::: {layout-ncol="2"}
+:::: {#first-column width="70%"}
+::: {.callout-tip}
+## CC BY 4.0 Attribution 4.0 International
+
+This standard license allows users to **share** (copy and redistribute) and **adapt** (remix, transform) the material for any purpose if credit is provided to the original authors. 
+:::
+::::
+
+:::: {#second-column width="30%"}
+::: {style="text-align: right;font-size: 70%"}
+![](images/Organize-Deposit/OpenBrain_QR.png){fig-align="right" width="70%"} 
+
+**Open Brain Consent**
+:::
+::::
+:::::
+
++  **Methodological information:** Describe how the data was generated. This contextualizes and allows for [data validation]{style="color:darkgreen;"}. 
+
+::: {style="text-align: left; font-size: 80%"}
+```plaintext
+Example from https://doi.org/10.20383/103.0802
+Electrochemical measurements were conducted in a quartz electrochemical cell using a Palmsens4 potentiostat. The electrolyte was fully purged with Ar between scans to create an inert electrochemical environment... 
+```
+:::
+
+# Share your data in scientific repositories
+
+These good data management practices make datasets suitable for sharing in repositories like [FRDR]{style="color:blue;"} (https://www.frdr-dfdr.ca/) and [Borealis]{style="color:blue;"} (https://borealisdata. ca/). FRDR is a curated, bilingual, multi-disciplinary repository exclusively for Canadian researchers that specializes in large data deposits. Borealis, the Canadian Dataverse Repository, is a bilingual, multi-disciplinary, secure, research data repository supported by academic libraries and research institutions across Canada.
+
+![](images/General/Repositories_Logo.png){fig-align="center" width="80%"}
+
+::: {.callout-tip}
+## Canadian tri-agency RDM policy
+The Government of Canada established in 2021 the [Tri-Agency RDM policy](https://rcr.ethics.gc.ca/eng/framework-cadre-2021.html) for responsible conduct of research, including practices to implement data management plans (DMP) and data sharing from publicly funded science.   
+:::
+
+
