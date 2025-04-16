@@ -1,0 +1,161 @@
+---
+title: "TreeGen: File Tree Generator for Scientific Data" 
+author: 
+  - name: "Research Data Curation Team"
+    affiliation: "Digital Research Alliance of Canada"
+    email: "rdm-gdr@alliancecan.ca"
+date: "Version 1, April 2025"
+
+format: 
+  html:
+    title-block-banner: true
+    toc: false
+    number-sections: false
+    css: styles/RDM_Codebook_styles.css
+    include-in-header: 
+      text: |
+        <style>
+          .header-links { text-align: left; font-size: 14px; margin-top: -15px; }
+          .header-links a { margin-left: 10px; }
+        </style>
+keywords: 
+  - File tree
+  - Research Data Management
+  - Open Science
+  - Data sharing
+links: 
+  - text: "TreeGen: File Tree Generator for Scientific Data"
+    url: "https://github.com/Alliance-RDM-GDR/RDM_FileTree"
+
+css: "styles/RDM_Codebook_styles.css"
+---
+
+::: {#header-info}
+<div class="header-links">
+📄 <a href="https://github.com/Alliance-RDM-GDR/RDM_FileTree" target="_blank">TreeGen desktop-App</a>
+</div>
+
+<div class="language-switch">
+🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePager/RDM_TreeGen_fr.html" target="_blank">🇫🇷 Version Française</a>
+</div>
+:::
+
+## What is TreeGen?
+
+TreeGen is a desktop application designed to help researchers and data curators visualize, describe, and export the structure of folders and files in a scientific dataset. It offers a simple and dynamic interface to:
+
+- Browse a directory and display its content as a tree.
+- Add textual descriptions to each file or folder.
+- Filter out hidden files and unwanted file types.
+- Export the documented structure as a Markdown or plain text file.
+
+::: {.callout-note}
+We designed a desktop application because some datasets can be very large to handle online.
+:::
+
+## Getting Started
+
+### Download executable files:
+
+**Windows users:** Download and run the .exe file located in the [dist/](https://github.com/Alliance-RDM-GDR/RDM_FileTree/tree/main/dist) folder.
+
+**Mac (M1) users:** Download the .app app file located in the [dist/](https://github.com/Alliance-RDM-GDR/RDM_FileTree/tree/main/dist) folder.
+
+### Run script
+
+#### Prerequisites
+
+- Python 3.x
+- [PyQt5](https://pypi.org/project/PyQt5/)
+- [humanize](https://pypi.org/project/humanize/)
+
+_Optional (for converting Markdown to HTML in the preview, if needed):_
+
+- [Markdown](https://pypi.org/project/Markdown/)
+
+#### Install the dependencies using pip:
+
+```bash
+pip install PyQt5 humanize
+# Optional:
+pip install markdown
+```
+
+#### Clone the Repository
+
+```bash
+git clone https://github.com/Alliance-RDM-GDR/RDM_FileTree
+cd file-tree-generator
+```
+#### Run the application in terminal with:
+
+```bash
+python TreeGen.py
+```
+
+## How to use the app
+
+### 1. Launch TreeGen
+
+Double-click the application executable or run the script. The main window displays the instructions, and two panels: the **file tree** and the **preview/export area**.
+
+### 2. Select a directory
+
+Click **Select Directory** and choose the folder you wish to document. The file tree will populate with its contents.
+
+### 3. Add descriptions
+
+Double-click on the **Description** column to annotate/descripbe any file or folder. Descriptions are automatically saved in a hidden `.descriptions.json` file.
+
+::: {.callout-tip}
+Provide a simple description that shows the contents of the file. In addition, use README files or [codebooks](https://alliance-rdm-gdr.github.io/RDM_Codebook_App/) to provide specific information, including context, methods, and description of variables. 
+:::
+
+### 4. Use filters (optional)
+
+- **Search bar**: Find specific files or folders by name.  
+- **Exclude extensions**: Type comma-separated extensions (e.g., `.tmp, .pyc`) to hide from view.  
+- **Exclude hidden**: Toggle visibility of hidden files and folders.
+
+### 5. Export the file tree
+
+Use the top buttons to export the tree:
+
+- **Markdown (.md)**: Suitable for GitHub, README files, and research documentation.
+- **Plain Text (.txt)**: Readable in any text editor.
+
+Both formats include:
+- Indented folder/file tree
+- File sizes
+- Inline comments with your descriptions
+- A summary section
+
+## Example Output
+
+```md
+MyDataset
+├── data.csv [ 12.3 MB ]
+│   <!-- Contains raw experiment results -->
+├── scripts
+│   ├── clean.py [ 2.1 KB ]
+│   │   <!-- Script for data cleaning -->
+│   └── analyze.R [ 3.7 KB ]
+└── docs
+    └── README.md [ 1.2 KB ]
+
+**Summary:**
+- Total folders: 3
+- Total files: 4
+- Total size: 15.6 MB
+
+```
+
+## About / Support
+
+TreeGen was developed and is maintained by the curation team of the Federated Research Data Repository [(FRDR)](https://www.frdr-dfdr.ca/repo/).
+
+For questions or suggestions, contact us at rdm-gdr@alliancecan.ca.
+
+::: {style="text-align: center;font-size: 150%"}
+![Visit [FRDR](https://www.frdr-dfdr.ca/repo/) or [Borealis](https://borealisdata.ca/)](images/General/Repositories_Logo.png){fig-alt="Logos of two Canadian research data repositories: FRDR (Federated Research Data Repository) and Borealis. The FRDR logo features a geometric pattern of yellow squares forming a diamond shape, with the repository name in black and gold text. The Borealis logo includes an artistic depiction of the Northern Lights over mountains and a lake, with the repository name in bold white text. " fig-align="center" width="600" height="120"}
+:::
