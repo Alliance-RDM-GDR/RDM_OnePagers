@@ -57,9 +57,9 @@ We designed a desktop application because some datasets can be very large to han
 
 ### Download executable files:
 
-**Windows users:** Download and run the .exe file located in the [dist/](https://github.com/Alliance-RDM-GDR/RDM_FileTree/tree/main/dist) folder.
+**Windows users:** Download and run the .exe file located in the [dist](https://github.com/Alliance-RDM-GDR/RDM_FileTree/tree/main/dist) folder.
 
-**Mac (M1) users:** Download the .app app file located in the [dist/](https://github.com/Alliance-RDM-GDR/RDM_FileTree/tree/main/dist) folder.
+**Mac (M1) users:** Download the .app app file located in the [dist](https://github.com/Alliance-RDM-GDR/RDM_FileTree/tree/main/dist) folder.
 
 ### Run script
 
@@ -81,7 +81,7 @@ pip install PyQt5 humanize
 pip install markdown
 ```
 
-#### Clone the Repository
+#### Clone the [Repository](https://github.com/Alliance-RDM-GDR/RDM_FileTree)
 
 ```bash
 git clone https://github.com/Alliance-RDM-GDR/RDM_FileTree
