@@ -42,7 +42,7 @@ css: "styles/RDM_Codebook_styles.css"
 
 ## What is TreeGen?
 
-TreeGen is a desktop application designed to help researchers and data curators visualize, describe, and export the structure of folders and files in a scientific dataset. It offers a simple and dynamic interface to:
+TreeGen is a desktop application designed to help researchers and data curators visualize, describe, and export the structure of folders and files in a research dataset. It offers a simple and dynamic interface to:
 
 - Browse a directory and display its content as a tree.
 - Add textual descriptions to each file or folder.

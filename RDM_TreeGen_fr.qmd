@@ -1,5 +1,5 @@
 ---
-title: "TreeGen : Générateur d'arborescence pour les données scientifiques"
+title: "TreeGen : Générateur d'arborescence pour les données de recherche"
 author: 
   - name: "Équipe de curation des données de recherche"
     affiliation: "Alliance de recherche numérique du Canada"
@@ -24,7 +24,7 @@ keywords:
   - Science ouverte
   - Partage des données
 links: 
-  - text: "TreeGen : Générateur d'arborescence pour les données scientifiques"
+  - text: "TreeGen : Générateur d'arborescence pour les données de recherche"
     url: "https://github.com/Alliance-RDM-GDR/RDM_FileTree"
 
 css: "styles/RDM_Codebook_styles.css"
@@ -42,7 +42,7 @@ css: "styles/RDM_Codebook_styles.css"
 
 ## Qu'est-ce que TreeGen ?
 
-TreeGen est une application conçue pour aider les chercheurs et les curateurs de données à visualiser, décrire et exporter la structure des dossiers et fichiers d’un jeu de données scientifique. Elle offre une interface simple et dynamique pour :
+TreeGen est une application conçue pour aider les chercheurs et les curateurs de données à visualiser, décrire et exporter la structure des dossiers et fichiers d’un jeu de données de recherche. Elle offre une interface simple et dynamique pour :
 
 - Parcourir un répertoire et afficher son contenu sous forme d’arborescence.
 - Ajouter des descriptions textuelles à chaque fichier ou dossier.
