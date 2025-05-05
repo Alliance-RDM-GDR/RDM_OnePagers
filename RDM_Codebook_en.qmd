@@ -1,5 +1,5 @@
 ---
-title: "Creating Codebooks for Research Data" 
+title: "Creating codebooks for research data" 
 author: 
   - name: "Research Data Curation Team"
     affiliation: "Digital Research Alliance of Canada"
@@ -26,7 +26,7 @@ keywords:
   - Data sharing
 links: 
   - text: "GitHub Repository"
-    url: "https://github.com/Alliance-RDM-GDR/RDM_OnePager"
+    url: "https://github.com/Alliance-RDM-GDR/RDM_OnePagers"
   - text: "Codebook generator Web-App"
     url: "https://alliance-rdm-gdr.github.io/RDM_Codebook_App/"
 
@@ -35,12 +35,12 @@ css: "styles/RDM_Codebook_styles.css"
 
 ::: {#header-info}
 <div class="header-links">
-🔗 <a href="https://github.com/Alliance-RDM-GDR/RDM_OnePager" target="_blank">GitHub Repository</a> |
+🔗 <a href="https://github.com/Alliance-RDM-GDR/RDM_OnePagers" target="_blank">GitHub Repository</a> |
 📄 <a href="https://alliance-rdm-gdr.github.io/RDM_Codebook_App/" target="_blank">Codebook generator Web-App</a>
 </div>
 
 <div class="language-switch">
-🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePager/RDM_Codebook_fr.html" target="_blank">🇫🇷 Version Française</a>
+🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePagers/RDM_Codebook_fr.html" target="_blank">🇫🇷 Version Française</a>
 </div>
 :::
 

@@ -1,5 +1,5 @@
 ---
-title: "TreeGen: File Tree Generator for Scientific Data" 
+title: "TreeGen: File tree generator for research data" 
 author: 
   - name: "Research Data Curation Team"
     affiliation: "Digital Research Alliance of Canada"
@@ -24,7 +24,7 @@ keywords:
   - Open Science
   - Data sharing
 links: 
-  - text: "TreeGen: File Tree Generator for Scientific Data"
+  - text: "TreeGen: File tree generator for research data"
     url: "https://github.com/Alliance-RDM-GDR/RDM_FileTree"
 
 css: "styles/RDM_Codebook_styles.css"
@@ -36,7 +36,7 @@ css: "styles/RDM_Codebook_styles.css"
 </div>
 
 <div class="language-switch">
-🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePager/RDM_TreeGen_fr.html" target="_blank">🇫🇷 Version Française</a>
+🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePagers/RDM_TreeGen_fr.html" target="_blank">🇫🇷 Version Française</a>
 </div>
 :::
 

@@ -36,7 +36,7 @@ css: "styles/RDM_Codebook_styles.css"
 </div>
 
 <div class="language-switch">
-🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePager/RDM_TreeGen_en.html" target="_blank">🇺🇸 English version</a>
+🌍 <a href="https://alliance-rdm-gdr.github.io/RDM_OnePagers/RDM_TreeGen_en.html" target="_blank">🇺🇸 English version</a>
 </div>
 :::
 
