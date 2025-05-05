@@ -73,7 +73,7 @@ En fonction de la discipline, d'autres attributs peuvent être décrits pour ren
 
 ## Comment créer un codebook
 
-Créer des livres de code est une bonne pratique scientifique qui devrait être mise en place dès le début du processus de recherche. Il est recommandé d’utiliser un format simple et clair. Le [générateur de livre de codes](https://alliance-rdm-gdr.github.io/RDM_Codebook_App/) basé sur le web permet à l'utilisateur de télécharger un livre de codes au format CSV dérivé d'un tableau de données donné.
+Créer des livres de code est une bonne pratique de recherche qui devrait être mise en place dès le début du processus de recherche. Il est recommandé d’utiliser un format simple et clair. Le [générateur de livre de codes](https://alliance-rdm-gdr.github.io/RDM_Codebook_App/) basé sur le web permet à l'utilisateur de télécharger un livre de codes au format CSV dérivé d'un tableau de données donné.
 
 
 # Exemple de livre de code
